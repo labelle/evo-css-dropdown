@@ -29,7 +29,8 @@
 	$(document).ready(function() { 
 // when dropdown item changes its state then this event will fire
 	$("#style-list").change(function() { 
-		// if we select custom from dropdown , visible custom textbox for custom stylesheet otherwise set stylesheet which have selected
+		// if we select custom from dropdown, make visible the custom textbox for custom stylesheet.
+		// otherwise set stylesheet which we have selected
 		if($(this).val()=="custom")
 		{
 			$("#custom").css("display","block");
@@ -41,7 +42,7 @@
 		return false;
 	});
 
-// when enetering style sheet name in textbox it will set that file name in style of html doc
+// when entering style sheet name in textbox it will set that file name in style of html doc
 	$("#custom").change(function(){
 		$("link").attr("href","css/"+$(this).val());
 	});
