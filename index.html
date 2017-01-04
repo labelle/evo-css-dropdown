@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+	#custom{
+		display: none;
+	}
+	</style>
+</head>
+<body>
+
+
+<select id="style-list">
+		<option value="">None</option>
+		<option value="red.css">Red</option>
+		<option value="yellow.css">Yellow</option>
+		<option value="blue.css">Blue</option>
+		<option value="custom">Custom</option>
+</select>
+
+<br>
+<!--  custom input box for custom style sheet name-->
+<input type="text" id="custom" placeholder="Please enter css file name"  />
+
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function() { 
+// when dropdown item changes its state then this event will fire
+	$("#style-list").change(function() { 
+		// if we select custom from dropdown , visible custom textbox for custom stylesheet otherwise set stylesheet which have selected
+		if($(this).val()=="custom")
+		{
+			$("#custom").css("display","block");
+			$("link").attr("href","css/style.css");	
+		}else{
+			$("#custom").css("display","none");
+			$("link").attr("href","css/"+$(this).val());	
+		}
+		return false;
+	});
+
+// when enetering style sheet name in textbox it will set that file name in style of html doc
+	$("#custom").change(function(){
+		$("link").attr("href","css/"+$(this).val());
+	});
+});
+</script>
+</body>
+</html>
+
+
