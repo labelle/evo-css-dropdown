@@ -10,7 +10,7 @@ Open the html file and copy/paste/edit as follows:
 1. place css link in head
 2. place the css snippet in style tags
 3. place html select markup in body, including down to the input
-4. rename the options per your custom css files
+4. rename the options per your custom css files (leave 'none' at the top)
 5. link to jquery in scripts at bottom
 6. place custom script at bottom
 7. place css files in your css folder, adjacent to your document
