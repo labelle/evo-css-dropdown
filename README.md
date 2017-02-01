@@ -6,6 +6,7 @@ For a toggle button CSS theme switcher, check out [Evo CSS Switch] (https://gith
 ## usage
 
 Open the html file and copy/paste/edit as follows:
+
 1. place css link in head
 2. place the css snippet in style tags
 3. place html select markup in body, including down to the input
